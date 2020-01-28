@@ -10,7 +10,9 @@ class StudentsController < ApplicationController
   end
   
   def active
-    @student = Student.fid
+    set_student
+    set_student.active = !set_student.active
+    se
   end
 
   private
